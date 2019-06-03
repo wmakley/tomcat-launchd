@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>Label</key>
+  <string>mysite.tomcat</string>
+
+  <key>Program</key>
+  <string>/path/to/tomcat/bin/launchd_wrapper.sh</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>CATALINA_HOME</key>
+    <string>/path/to/tomcat</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>WorkingDirectory</key>
+  <string>/path/to/tomcat</string>
+
+  <key>StandardOutPath</key>
+  <string>/path/to/tomcat/logs/launchd.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/path/to/tomcat/logs/launchd-error.log</string>
+</dict>
+</plist>
