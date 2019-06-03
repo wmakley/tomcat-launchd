@@ -4,6 +4,17 @@ The .plist file needs to be edited with the correct path to tomcat in numerous p
 
 The shell script needs to go in the tomcat "bin" directory. It is necessary to wrap tomcat, since tomcat's default startup script forks itself into the background and launchd would continuously try to restart it.
 
+
+## Installation
+
+1. Copy the .plist file to ~/Library/LaunchAgents/ and modify the paths and labels as needed.
+2. Copy launchd\_wrapper.sh to your Tomcat "bin" folder.
+3. `launchctl load ~/Library/LaunchAgents/com.mysite.tomcat.plist`
+
+To disable the service:
+
+`launchctl unload ~/Library/LaunchAgents/com.mysite.tomcat.plist`
+
 See:
 * https://confluence.atlassian.com/display/CONF32/Start+Confluence+automatically+on+OS+X+using+launchd
 * https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html
