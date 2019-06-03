@@ -15,7 +15,21 @@ To stop/disable the service:
 
 `launchctl unload ~/Library/LaunchAgents/mysite.tomcat.plist`
 
-## References
+## Running tomcat as another user
+
+1. Copy the .plist file to /Library/LaunchAgents/ instead.
+2. Add the following key/value to it, replacing "tomcat" with your desired user:
+    ```xml
+    <key>UserName</key>
+    <string>tomcat</string>
+    ```
+3. `sudo launchctl load /Library/LaunchAgents/mysite.tomcat.plist`
+
+Disabling is the same as above:
+
+`sudo launchctl unload /Library/LaunchAgents/mysite.tomcat.plist`
+
+## References:
 * https://confluence.atlassian.com/display/CONF32/Start+Confluence+automatically+on+OS+X+using+launchd
 * https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html
 * https://www.manpagez.com/man/5/launchd.plist/
