@@ -15,7 +15,7 @@ To stop/disable the service:
 
 `launchctl unload ~/Library/LaunchAgents/mysite.tomcat.plist`
 
-See:
+## References
 * https://confluence.atlassian.com/display/CONF32/Start+Confluence+automatically+on+OS+X+using+launchd
 * https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html
 * https://www.manpagez.com/man/5/launchd.plist/
