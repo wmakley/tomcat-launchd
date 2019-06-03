@@ -5,11 +5,11 @@
   <key>Disabled</key>
   <false/>
 
-  <key>KeepAlive</key>
-  <true/>
-
   <key>Label</key>
   <string>mysite.tomcat</string>
+
+  <key>ServiceDescription</key>
+  <string>Apache Tomcat</string>
 
   <key>ProgramArguments</key>
   <array>
@@ -20,20 +20,17 @@
   <dict>
     <key>CATALINA_HOME</key>
     <string>/path/to/tomcat</string>
-    <!--
     <key>JAVA_HOME</key>
-    <string>/path/to/java/home</string>
-    -->
+    <string>/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home</string>
   </dict>
 
+  <!-- Launch the job when loaded -->
   <key>RunAtLoad</key>
   <true/>
 
-  <key>OnDemand</key>
-  <false/>
-
-  <key>ServiceDescription</key>
-  <string>Apache Tomcat</string>
+  <!-- Restart if it crashes or exits for any reason -->
+  <key>KeepAlive</key>
+  <true/>
 
   <key>WorkingDirectory</key>
   <string>/path/to/tomcat</string>
