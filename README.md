@@ -8,7 +8,7 @@ The shell script needs to go in the tomcat "bin" directory. It is necessary to w
 ## Installation
 
 1. Copy the .plist file to ~/Library/LaunchAgents/ and modify the paths and labels as needed.
-2. Copy launchd\_wrapper.sh to your Tomcat "bin" folder.
+2. Copy launchd\_wrapper.sh to your Tomcat "bin" folder and make sure it is executable (`chmod +x launchd_wrapper.sh`).
 3. `launchctl load ~/Library/LaunchAgents/mysite.tomcat.plist`
 
 To stop/disable the service:
