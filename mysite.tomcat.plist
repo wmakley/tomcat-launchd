@@ -2,23 +2,35 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+  <key>Disabled</key>
+  <false/>
+
   <key>KeepAlive</key>
   <true/>
 
   <key>Label</key>
   <string>mysite.tomcat</string>
 
-  <key>Program</key>
-  <string>/path/to/tomcat/bin/launchd_wrapper.sh</string>
+  <key>ProgramArguments</key>
+  <array> 
+    <string>/path/to/tomcat/bin/launchd_wrapper.sh</string>
+  </array>
 
   <key>EnvironmentVariables</key>
   <dict>
     <key>CATALINA_HOME</key>
     <string>/path/to/tomcat</string>
+    <!--
+    <key>JAVA_HOME</key>
+    <string>/path/to/java/home</string>
+    -->
   </dict>
 
   <key>RunAtLoad</key>
   <true/>
+
+  <key>ServiceDescription</key>
+  <string>Apache Tomcat</string>
 
   <key>WorkingDirectory</key>
   <string>/path/to/tomcat</string>
@@ -28,5 +40,9 @@
 
   <key>StandardErrorPath</key>
   <string>/path/to/tomcat/logs/launchd-error.log</string>
+
+  <!-- uncomment to run as root or another user -->
+  <!--<key>UserName</key>
+  <string>root</string>-->
 </dict>
 </plist>
