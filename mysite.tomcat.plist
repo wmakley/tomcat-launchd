@@ -12,7 +12,7 @@
   <string>mysite.tomcat</string>
 
   <key>ProgramArguments</key>
-  <array> 
+  <array>
     <string>/path/to/tomcat/bin/launchd_wrapper.sh</string>
   </array>
 
@@ -28,6 +28,9 @@
 
   <key>RunAtLoad</key>
   <true/>
+
+  <key>OnDemand</key>
+  <false/>
 
   <key>ServiceDescription</key>
   <string>Apache Tomcat</string>
