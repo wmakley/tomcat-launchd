@@ -3,12 +3,12 @@
 function shutdown()
 {
         date
-        echo "Shutting down Confluence"
+        echo "Shutting down Tomcat"
         $CATALINA_HOME/bin/catalina.sh stop
 }
 
 date
-echo "Starting Confluence"
+echo "Starting Tomcat"
 export CATALINA_PID=/tmp/$$
 
 # Uncomment to increase Tomcat's maximum heap allocation
